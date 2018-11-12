@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const API_ROOT_PATH = '/api/';
 
-class App extends React.Component {
+class App extends Component {
   state = { displayText: 'React App' };
 
   async componentDidMount() {
