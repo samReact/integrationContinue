@@ -14,7 +14,7 @@
     "test-server:watch": "yarn test-server --watch",
     "test-client": "cross-env CI=true yarn --cwd client test",
     "test-client:watch": "yarn --cwd client test",
-    "test": "npm-run-all --parallel test-server test-client"
+    "test": "npm-run-all --parallel lint test-server test-client"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
