@@ -6,7 +6,7 @@ cache:
 before_deploy: yarn global add now
 deploy:
   - provider: script
-    script: now --token $NOW_TOKEN --public
+    script: bash scripts/deploy_review_app.sh
     skip_cleanup: true
     on:
       all_branches: true
