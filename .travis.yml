@@ -22,3 +22,9 @@ deploy:
     skip_cleanup: true
     on:
       tags: true
+ - provider: script
+    script: bash scripts/tag_and_push.sh
+    skip_cleanup: true
+    on:
+      master: true
+      condition: -z $(git tag --points-at $TRAVIS_COMMIT)
