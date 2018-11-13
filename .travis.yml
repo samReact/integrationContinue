@@ -10,9 +10,15 @@ deploy:
     skip_cleanup: true
     on:
       all_branches: true
+      tags: false
       condition: $TRAVIS_BRANCH != "master"
   - provider: script
     script: bash scripts/deploy_staging_app.sh
     skip_cleanup: true
     on:
       branch: master
+  - provider: script
+    script: bash scripts/deploy_production_app.sh
+    skip_cleanup: true
+    on:
+      tags: true
