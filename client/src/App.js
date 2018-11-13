@@ -14,7 +14,7 @@ class App extends Component {
   render() {
     const { displayText } = this.state;
 
-    return <div>{displayText}</div>;
+    return <div style={{ color: 'red' }}>{displayText}</div>;
   }
 }
 
